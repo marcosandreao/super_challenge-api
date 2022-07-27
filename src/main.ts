@@ -4,6 +4,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, { abortOnError: false });
+  app.setGlobalPrefix('api');
   await app.listen(3000);
 }
 bootstrap();

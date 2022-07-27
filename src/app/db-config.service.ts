@@ -8,15 +8,19 @@ export class DBConfigService implements TypeOrmOptionsFactory {
     constructor(private configService: ConfigService) { }
 
     createTypeOrmOptions(): TypeOrmModuleOptions {
+        console.log( this.configService);
         return {
             type: 'mysql',
             username: this.configService.get('database.user'),
             password: this.configService.get('database.password'),
             database: this.configService.get('database.name'),
             host: this.configService.get('database.host'),
-            port: this.configService.get('database.port'),
+            port: +this.configService.get('database.port'),
             synchronize: !this.configService.get('is_production'),
             autoLoadEntities: true,
+            entities: [],
+            logging: true,
+            debug: true
         };
     }
 }

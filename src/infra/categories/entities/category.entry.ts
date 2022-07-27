@@ -1,4 +1,4 @@
-import { Device } from "../devices/device.entry";
+import { Device } from "src/infra/devices/device.entry";
 
 export interface Category {
     id: number

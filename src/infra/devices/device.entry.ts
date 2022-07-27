@@ -1,4 +1,4 @@
-import { Category } from "../categories/category.entry";
+import { Category } from "../categories/entities/category.entry";
 
 export interface Device {
     id: number

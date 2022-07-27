@@ -1,13 +1,13 @@
 import { Module } from '@nestjs/common';
-import { CategoryDomainModule } from 'src/domain/category-domain.module';
+import { DomainModule } from 'src/domain/domain.module';
 import { CreateCategoryController } from './categories/create-category.controller';
 
 @Module({
     imports: [
-        CategoryDomainModule,
+        DomainModule,
     ],
     controllers: [
         CreateCategoryController,
     ]
 })
-export class CategoryWebModule { }
+export class WebModule { }

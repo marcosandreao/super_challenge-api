@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { CategoryInfraModule } from 'src/infra/category-infra.module';
+import { InfraModule } from 'src/infra/infra.module';
 import { CreateCategoryUseCase } from './categories/create-category.usecase';
 
 @Module({
     imports: [
-        CategoryInfraModule,
+        InfraModule,
     ],
     providers: [
         CreateCategoryUseCase,
@@ -13,4 +13,4 @@ import { CreateCategoryUseCase } from './categories/create-category.usecase';
         CreateCategoryUseCase,
     ]
 })
-export class CategoryDomainModule { }
+export class DomainModule { }

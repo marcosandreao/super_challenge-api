@@ -12,7 +12,11 @@ export class CreateCategoryController {
 
     @Post()
     async create(@Body() category: BodyRequest) {
-        this.useCase.create(category.name);
+        const cat = await this.useCase.execute(category.name);
+        return {
+            'id': cat.id,
+            'name': cat.name
+        }
     }
 
     @Get()

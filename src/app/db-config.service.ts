@@ -8,7 +8,6 @@ export class DBConfigService implements TypeOrmOptionsFactory {
     constructor(private configService: ConfigService) { }
 
     createTypeOrmOptions(): TypeOrmModuleOptions {
-        console.log( this.configService);
         return {
             type: 'mysql',
             username: this.configService.get('database.user'),
@@ -19,8 +18,6 @@ export class DBConfigService implements TypeOrmOptionsFactory {
             synchronize: !this.configService.get('is_production'),
             autoLoadEntities: true,
             entities: [],
-            logging: true,
-            debug: true
         };
     }
 }

@@ -9,12 +9,13 @@ import { DeviceEntity } from "./devices/device.entity";
   imports: [
     TypeOrmModule.forFeature([CategoryEntity, DeviceEntity])
   ],
-  exports: [
-    TypeOrmModule,
-  ],
   providers: [{
     provide: CategoryRepo,
     useClass: CategoryService,
   }],
+  exports: [
+    TypeOrmModule,
+    CategoryRepo,
+  ],
 })
 export class InfraModule { }

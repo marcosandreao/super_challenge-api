@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, Unique } from 'typeorm';
 
 import { CategoryEntity } from "../categories/category.entity";
 

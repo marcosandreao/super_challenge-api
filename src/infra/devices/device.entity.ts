@@ -11,7 +11,7 @@ export class DeviceEntity {
   color: string;
 
   @Column()
-  partNumber: string;
+  partNumber: number;
 
   @ManyToOne(type => CategoryEntity)
   category: CategoryEntity;

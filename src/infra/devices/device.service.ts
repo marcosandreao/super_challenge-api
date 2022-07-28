@@ -12,7 +12,11 @@ export class DeviceService implements DeviceRepo {
     ) { }
 
     findAll(): Promise<DeviceEntity[]> {
-        return this.devicesRepository.find();
+        return this.devicesRepository.find({
+            relations: {
+                category: true,
+            },
+        });
     }
 
     findOne(id: number): Promise<DeviceEntity> {

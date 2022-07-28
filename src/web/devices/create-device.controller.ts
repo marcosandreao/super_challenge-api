@@ -27,7 +27,6 @@ export class CreateDeviceController {
     @Post()
     async create(@Body() data: BodyRequest) {
         const device = await this.useCase.execute(data.color, data.partNumber, data.categoryId);
-        console.log("create", device);
         return {
             'id': device.id,
             'color': device.color,

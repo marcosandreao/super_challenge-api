@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, Unique } from 'typeorm';
 
 import { CategoryEntity } from "../categories/category.entity";
 
@@ -13,6 +13,6 @@ export class DeviceEntity {
   @Column()
   partNumber: number;
 
-  @ManyToOne(type => CategoryEntity)
+  @ManyToOne(() => CategoryEntity, (category) => category.devices)
   category: CategoryEntity;
 }

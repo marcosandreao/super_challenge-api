@@ -3,6 +3,7 @@ import { DomainModule } from 'src/domain/domain.module';
 import { CreateCategoryController } from './categories/create-category.controller';
 import { ListCategoryController } from './categories/list-category.controller';
 import { CreateDeviceController } from './devices/create-device.controller';
+import { ListDeviceController } from './devices/list-device.controller';
 
 @Module({
     imports: [
@@ -12,6 +13,7 @@ import { CreateDeviceController } from './devices/create-device.controller';
         CreateCategoryController,
         ListCategoryController,
         CreateDeviceController,
+        ListDeviceController,
     ]
 })
 export class WebModule { }

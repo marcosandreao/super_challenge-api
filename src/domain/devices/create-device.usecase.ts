@@ -14,6 +14,7 @@ export class CreateDeviceUseCase {
     if (!cat) {
       throw new HttpException('Category not found', HttpStatus.BAD_REQUEST);
     }
+    
 
     const device = new DeviceEntity();
     device.category = cat;

@@ -1,7 +1,10 @@
 import { Controller, Post, Body, Get } from '@nestjs/common';
+import { IsNotEmpty, MaxLength } from 'class-validator';
 import { CreateCategoryUseCase } from 'src/domain/categories/create-category.usecase';
 
-interface BodyRequest {
+class BodyRequest {
+    @IsNotEmpty()
+    @MaxLength(128)
     name: string;
 }
 
@@ -18,11 +21,5 @@ export class CreateCategoryController {
             'name': cat.name
         }
     }
-
-    @Get()
-    ping() {
-        return 'Hello World!';
-    }
-
 
 }

@@ -1,6 +1,8 @@
 import { Controller, Get } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { ListDeviceUseCase } from 'src/domain/devices/list-device.usecase';
 
+@ApiTags('devices')
 @Controller('devices')
 export class ListDeviceController {
 

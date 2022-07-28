@@ -9,7 +9,6 @@ export class ListDeviceController {
     @Get()
     async execute() {
         const result = await this.useCase.execute();
-        console.log(result);
         return result.map(device => {
             return {
                 'id': device.id,

@@ -13,6 +13,6 @@ export class DeviceEntity {
   @Column()
   partNumber: number;
 
-  @ManyToOne(type => CategoryEntity)
+  @ManyToOne(() => CategoryEntity, (category) => category.devices)
   category: CategoryEntity;
 }

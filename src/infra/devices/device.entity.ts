@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
 
-import { CategoryEntity } from "../categories/entities/category.entity";
+import { CategoryEntity } from "../categories/category.entity";
 
 @Entity()
 export class DeviceEntity {

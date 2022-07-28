@@ -1,4 +1,4 @@
-import { CategoryEntity } from "./entities/category.entity";
+import { CategoryEntity } from "./category.entity";
 
 export interface CategoryRepo {
 

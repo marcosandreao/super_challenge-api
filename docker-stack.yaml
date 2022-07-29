@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  superdesafio-api:
+    image: marcosandreao/superdesafio
+    ports:
+      - "80:3000"
+    environments:
+      - DATABASE_HOST=${DATABASE_HOST}
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+    deploy:
+      replicas: 5
+      
